@@ -1,0 +1,4 @@
+# BottomBar
+可以给底部Tab设置selector背景资源的BottomBar，基于rojude的BottomBar项目修改
+
+明天继续写
