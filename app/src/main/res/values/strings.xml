@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BottomBar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="main_home">首页</string>
+    <string name="main_chat">聊天</string>
+    <string name="main_square">广场</string>
+    <string name="main_discover">发现</string>
+    <string name="main_mine">我的</string>
+</resources>

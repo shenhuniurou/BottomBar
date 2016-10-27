@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/icon1_chosen"
+        inActiveColor="#ff808080"
+        activeColor="#FCC825"
+        title="首页"/>
+
+    <tab
+        id="@+id/tab_chat"
+        icon="@drawable/icon2_chosen"
+        inActiveColor="#ff808080"
+        activeColor="#FCC825"
+        title="聊天"/>
+
+    <tab
+        id="@+id/tab_square"
+        icon="@drawable/icon3_chosen"
+        inActiveColor="#ff808080"
+        activeColor="#FCC825"
+        title="广场"/>
+
+    <tab
+        id="@+id/tab_discover"
+        icon="@drawable/icon4_chosen"
+        inActiveColor="#ff808080"
+        activeColor="#FCC825"
+        title="发现"/>
+
+    <tab
+        id="@+id/tab_me"
+        icon="@drawable/icon5_chosen"
+        inActiveColor="#ff808080"
+        activeColor="#FCC825"
+        title="我的"/>
+    <!-- You can use @color resources too! -->
+</tabs>
