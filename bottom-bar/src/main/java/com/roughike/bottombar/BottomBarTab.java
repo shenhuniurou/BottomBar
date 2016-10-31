@@ -16,6 +16,7 @@ import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.Gravity;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -131,7 +132,7 @@ public class BottomBarTab extends LinearLayout {
         inflate(getContext(), layoutResource, this);
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER_HORIZONTAL);
-        setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
 
         iconView = (AppCompatImageView) findViewById(R.id.bb_bottom_bar_icon);
 
@@ -144,7 +145,7 @@ public class BottomBarTab extends LinearLayout {
         if (bgResource != 0) {
             iconView.setBackgroundResource(bgResource);
 
-            LinearLayout.LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
             params.setMargins(0, MiscUtils.dpToPixel(getContext(), 8), 0, 0);
             iconView.setLayoutParams(params);
         } else {

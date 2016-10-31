@@ -28,8 +28,10 @@ public interface OnTabSelectListener {
      *
      * @param tabId the new visible {@link BottomBarTab}
      */
-    //void onTabSelected(@IdRes int tabId);
+    //
+    void onTabSelected(@IdRes int tabId);
 
-    void onTabSelected(int position);
+
+    void onBarSelected(int position);
 
 }

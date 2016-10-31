@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void initBottomBar() {
         mBottomBar = (BottomBar) findViewById(R.id.bottomBar);
 
-        /*List<BottomBarTab> bottomBarItems = new ArrayList<>();
+        List<BottomBarTab> bottomBarItems = new ArrayList<>();
 
         BottomBarTab homeTab = new BottomBarTab(this, R.drawable.selector_rb_home, R.string.main_home);
         bottomBarItems.add(homeTab);
@@ -63,11 +63,32 @@ public class MainActivity extends AppCompatActivity {
         BottomBarTab meTab = new BottomBarTab(this, R.drawable.selector_rb_mine, R.string.main_mine);
         bottomBarItems.add(meTab);
 
-        mBottomBar.setItems(bottomBarItems);*/
+        mBottomBar.setItems(bottomBarItems);
 
         mBottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+
+            @Override public void onTabSelected(@IdRes int tabId) {
+                switch (tabId) {
+                    case R.id.tab_home:
+                        switchToFragment(BOTTOM_ITEM_TITLE_HOME_INDEX);
+                        break;
+                    case R.id.tab_chat:
+                        switchToFragment(BOTTOM_ITEM_TITLE_CHAT_INDEX);
+                        break;
+                    case R.id.tab_square:
+                        switchToFragment(BOTTOM_ITEM_TITLE_SQUARE_INDEX);
+                        break;
+                    case R.id.tab_discover:
+                        switchToFragment(BOTTOM_ITEM_TITLE_DISCOVER_INDEX);
+                        break;
+                    case R.id.tab_me:
+                        switchToFragment(BOTTOM_ITEM_TITLE_ME_INDEX);
+                        break;
+                }
+            }
+
             @Override
-            public void onTabSelected(int position) {
+            public void onBarSelected(int position) {
                 switch (position) {
                     case BOTTOM_ITEM_TITLE_HOME_INDEX:
                         switchToFragment(BOTTOM_ITEM_TITLE_HOME_INDEX);

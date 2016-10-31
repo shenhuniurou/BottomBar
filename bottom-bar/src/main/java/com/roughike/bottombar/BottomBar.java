@@ -247,6 +247,7 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
             bottomBarTab.setInActiveAlpha(inActiveTabAlpha);
             bottomBarTab.setActiveColor(activeTabColor);
             bottomBarTab.setInActiveColor(inActiveTabColor);
+            bottomBarTab.setBarColorWhenSelected(defaultBackgroundColor);
             //这一步很关键
             bottomBarTab.setIndexInContainer(i);
         }
@@ -345,7 +346,7 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
             if (tabXmlResource != 0) { //使用xml配置tabs
                 listener.onTabSelected(getCurrentTabId());
             } else {
-                listener.onTabSelected(getCurrentTabPosition());
+                listener.onBarSelected(getCurrentTabPosition());
             }
         }
     }
@@ -509,12 +510,10 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
     private void initializeShyBehavior() {
         ViewParent parent = getParent();
 
-        boolean hasAbusiveParent = parent != null
-                && parent instanceof CoordinatorLayout;
+        boolean hasAbusiveParent = parent != null && parent instanceof CoordinatorLayout;
 
         if (!hasAbusiveParent) {
-            throw new RuntimeException("In order to have shy behavior, the " +
-                    "BottomBar must be a direct child of a CoordinatorLayout.");
+            throw new RuntimeException("In order to have shy behavior, the BottomBar must be a direct child of a CoordinatorLayout.");
         }
 
         if (!shyHeightAlreadyCalculated) {
@@ -602,7 +601,6 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
     }
 
     private void handleClick(View v) {
-        Log.d("BottomBar", "currentPosition-----------" + currentTabPosition);
         BottomBarTab oldTab = getCurrentTab();
         BottomBarTab newTab = (BottomBarTab) v;
 
@@ -656,7 +654,7 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
 
             if (newPosition != currentTabPosition) {
                 if (onTabSelectListener != null) {
-                    onTabSelectListener.onTabSelected(newPosition);
+                    onTabSelectListener.onBarSelected(newPosition);
                 }
             } else if (onTabReselectListener != null && !ignoreTabReselectionListener) {
                 onTabReselectListener.onTabReSelected(newPosition);

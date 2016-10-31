@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BB_BottomBarItem">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/bb_bottom_bar_icon"
@@ -16,4 +17,4 @@
         android:layout_gravity="bottom|center_horizontal"
         android:textAppearance="@style/BB_BottomBarItem_Fixed.TitleAppearance"/>
 
-</merge>
+</FrameLayout>
