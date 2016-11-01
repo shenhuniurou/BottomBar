@@ -232,7 +232,7 @@ mBottomBar.setOnTabSelectListener(new OnTabSelectListener() {
 
 ## LICENSE
 ```
-Copyright (c) 2016 shenhuniurou(http://github.com/shenhuniurou)
+Copyright (c) 2016 shenhuniurou
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
